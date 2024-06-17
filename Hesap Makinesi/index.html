@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .calculator {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .calculator .display {
+            height: 60px;
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+        .calculator button {
+            font-size: 20px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="calculator">
+        <h2>Hesap Makinesi</h2>
+        <div class="display" id="ekran">0</div>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(7)">7</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(8)">8</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(9)">9</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-warning btn-block" onclick="operasyon('/')">/</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(4)">4</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(5)">5</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(6)">6</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-warning btn-block" onclick="operasyon('*')">*</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(1)">1</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(2)">2</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(3)">3</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-warning btn-block" onclick="operasyon('-')">-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi(0)">0</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-block" onclick="sayi('.')">.</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-danger btn-block" onclick="temizle()">C</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-warning btn-block" onclick="operasyon('+')">+</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12">
+                <button class="btn btn-success btn-block" onclick="sonuc()">=</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
